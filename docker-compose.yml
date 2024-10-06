@@ -1,0 +1,24 @@
+services:
+  ref-n-portal-practice:
+    image: node:20-alpine
+    container_name: ref-n-portal-practice
+    hostname: ref-n-portal-practice
+    restart: unless-stopped
+    tty: true
+    working_dir: /usr/local/app
+    volumes:
+      - /mnt/Gallery/developments/React Projects/React course/ref-n-portal-practice:/usr/local/app
+    command: >
+      sh -c '
+        npm i &&
+        npm run dev
+      '
+    ports:
+      - "5173:5173"
+    networks:
+      - ref-n-portal-practice
+
+networks:
+  ref-n-portal-practice:
+    driver: bridge
+    name: ref-n-portal-practice

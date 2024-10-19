@@ -7,7 +7,7 @@ services:
     tty: true
     working_dir: /usr/local/app
     volumes:
-      - /mnt/Gallery/developments/React Projects/React course/ref-n-portal-practice:/usr/local/app
+      - /mnt/Gallery/developments/React Projects/React course/ref-n-portal-practice/react-ref-n-portal-practice:/usr/local/app
     command: >
       sh -c '
         npm i &&
